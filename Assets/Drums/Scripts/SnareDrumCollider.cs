@@ -28,11 +28,17 @@ public class SnareDrumCollider : MonoBehaviour
     }
     private void OnScale()
     {
-        var tween = transform.DOScale(changedSize, 0.09f).OnComplete(() => { transform.DOScale(origSize, 0.09f); });
+        //var tween = transform.DOScale(changedSize, 0.09f).OnComplete(() => { transform.DOScale(origSize, 0.09f); });
+        var tween = transform.DOShakeRotation(0.1f, 4, 30, 0, fadeOut: true, ShakeRandomnessMode.Harmonic);
         if (tween.IsPlaying()) return;
         transform.DOKill();
     }
-    private void OnTriggerEnter(Collider other)
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    SnareDrum();
+    //    OnScale();
+    //}
+    private void OnCollisionEnter(Collision collision)
     {
         SnareDrum();
         OnScale();

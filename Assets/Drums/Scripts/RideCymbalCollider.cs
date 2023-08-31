@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class RideCymbalCollider : MonoBehaviour
 {
@@ -35,9 +36,20 @@ public class RideCymbalCollider : MonoBehaviour
         transform.DOKill();
     }
 
-    private void OnTriggerEnter(Collider other)
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    RideCymbal();
+    //    OnScale();
+    //}
+
+    private void OnCollisionEnter(Collision collision)
     {
-        RideCymbal();
-        OnScale();
+        XRGrabInteractable interactable = collision.gameObject.GetComponent<XRGrabInteractable>();
+        if(interactable != null)
+        {
+            RideCymbal();
+            OnScale();
+        }
+    
     }
 }

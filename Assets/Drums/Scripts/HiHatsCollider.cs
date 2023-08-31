@@ -36,17 +36,17 @@ public class HiHatsCollider : MonoBehaviour
         transform.DOKill();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        HiHats();
-        OnScale();
-    }
-
-    //private void OnCollisionEnter(Collision collision)
+    //private void OnTriggerEnter(Collider other)
     //{
-    //    Debug.Log("Collided");
     //    HiHats();
     //    OnScale();
     //}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Collided");
+        HiHats();
+        OnScale();
+    }
 }
 

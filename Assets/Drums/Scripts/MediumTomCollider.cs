@@ -33,16 +33,24 @@ public class MediumTomCollider : MonoBehaviour
 
     private void OnScale()
     {
-        var tween = transform.DOScale(changedSize, 0.09f).OnComplete(() => { transform.DOScale(origSize, 0.09f); });
-        var tween2 = transform.DORotate(changedRotation, 0.09f).OnComplete(() => { transform.DORotate(origRotation, 0.09f); });
+        //var tween = transform.DOScale(changedSize, 0.09f).OnComplete(() => { transform.DOScale(origSize, 0.09f); });
+        //var tween2 = transform.DORotate(changedRotation, 0.09f).OnComplete(() => { transform.DORotate(origRotation, 0.09f); });
+        var tween3 = transform.DOShakeRotation(0.1f, 3, 10, 0, fadeOut: true, ShakeRandomnessMode.Harmonic);
 
-        if (tween.IsPlaying()) return;
-        if (tween2.IsPlaying()) return;
+        //if (tween.IsPlaying()) return;
+        //if (tween2.IsPlaying()) return;
+        if (tween3.IsPlaying()) return;
 
         transform.DOKill();
     }
 
-    private void OnTriggerEnter(Collider other)
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    MediumTom();
+    //    OnScale();
+    //}
+
+    private void OnCollisionEnter(Collision collision)
     {
         MediumTom();
         OnScale();

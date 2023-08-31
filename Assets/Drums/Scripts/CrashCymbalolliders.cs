@@ -36,19 +36,15 @@ public class CrashCymbalolliders : MonoBehaviour
         transform.DOKill();
     }
 
-    private void OnTriggerEnter(Collider other)
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    CrashCymbal();
+    //    OnScale();
+    //}
+
+    private void OnCollisionEnter(Collision collision)
     {
         CrashCymbal();
         OnScale();
     }
-
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    Debug.Log("Collided");
-
-    //    CrashCymbal();
-    //    OnScale();
-    //}
 }
-//-Have done collision effect when a stick collides drum using dotween
-//-Sound is emitted when the impulse force  is more than certain amount 

@@ -31,12 +31,13 @@ public class HighTomColliders : MonoBehaviour
     }
     private void OnScale()
     {
-        var tween = transform.DOScale(changedSize, 0.09f).OnComplete(() => { transform.DOScale(origSize, 0.09f); });
-        var tween2 = transform.DORotate(changedRotation, 0.09f).OnComplete(() => { transform.DORotate(origRotation, 0.09f); });
+        //var tween = transform.DOScale(changedSize, 0.09f).OnComplete(() => { transform.DOScale(origSize, 0.09f); });
+        //var tween2 = transform.DORotate(changedRotation, 0.09f).OnComplete(() => { transform.DORotate(origRotation, 0.09f); });
+        var tween3 = transform.DOShakeRotation(0.1f, 3, 30, 0, fadeOut: true, ShakeRandomnessMode.Harmonic);
 
-        if (tween.IsPlaying()) return;
-        if (tween2.IsPlaying()) return;
-
+        //if (tween.IsPlaying()) return;
+        //if (tween2.IsPlaying()) return;
+        if (tween3.IsPlaying()) return;
         transform.DOKill();
     }
 
@@ -48,16 +49,16 @@ public class HighTomColliders : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //HighTom();
-        //OnScale();
-        Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
-        if (collisionForce.y >= 50)
-        {
-            //Debug.Log("collision at y position= =" + collisionForce.y);
-            HighTom();
-            OnScale();
-        }
-        Debug.Log("the contact force is==" + collisionForce);
+        HighTom();
+        OnScale();
+        //Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
+        //if (collisionForce.y >= 50)
+        //{
+        //    //Debug.Log("collision at y position= =" + collisionForce.y);
+        //    HighTom();
+        //    OnScale();
+        //}
+        //Debug.Log("the contact force is==" + collisionForce);
     }
 }
 //Vector3(357.69104, 1.73200631, 313.573151)
