@@ -6,6 +6,8 @@ using UnityEngine;
 public class CrashCymbalolliders : MonoBehaviour
 {
     Vector3 changedSize, origSize;
+    public ParticleSystem FireworksAll;
+    public Transform particlePoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class CrashCymbalolliders : MonoBehaviour
         {
             CrashCymbal();
             OnScale();
+            Explode();
         }
     }
 
@@ -28,6 +31,11 @@ public class CrashCymbalolliders : MonoBehaviour
         AudioManager.instance.PlaySound(AudioManager.SoundName.CrashCymbal);
     }
 
+    void Explode()
+    {
+        Instantiate(FireworksAll, particlePoint);
+        FireworksAll.Play();
+    }
     private void OnScale()
     {
         //var tween = transform.DOScale(changedSize, 0.09f).OnComplete(() => { transform.DOScale(origSize, 0.09f); });
@@ -46,5 +54,6 @@ public class CrashCymbalolliders : MonoBehaviour
     {
         CrashCymbal();
         OnScale();
+        Explode();
     }
 }

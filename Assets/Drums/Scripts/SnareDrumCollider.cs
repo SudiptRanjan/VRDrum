@@ -6,6 +6,8 @@ using UnityEngine;
 public class SnareDrumCollider : MonoBehaviour
 {
     Vector3 changedSize, origSize;
+    public ParticleSystem FireworksAll;
+    public Transform particlePoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +22,17 @@ public class SnareDrumCollider : MonoBehaviour
         {
             SnareDrum();
             OnScale();
+            Explode();
         }
     }
     private void SnareDrum()
     {
         AudioManager.instance.PlaySound(AudioManager.SoundName.SnareDrum);
+    }
+    void Explode()
+    {
+        Instantiate(FireworksAll, particlePoint);
+        FireworksAll.Play();
     }
     private void OnScale()
     {
@@ -42,5 +50,6 @@ public class SnareDrumCollider : MonoBehaviour
     {
         SnareDrum();
         OnScale();
+        Explode();
     }
 }

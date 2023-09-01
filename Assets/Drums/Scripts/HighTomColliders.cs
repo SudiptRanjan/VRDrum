@@ -7,6 +7,8 @@ public class HighTomColliders : MonoBehaviour
 {
     Vector3 changedSize, origSize;
     Vector3 changedRotation, origRotation;
+    public ParticleSystem FireworksAll;
+    public Transform particlePoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class HighTomColliders : MonoBehaviour
         {
             HighTom();
             OnScale();
+            Explode();
         }
     }
     private void HighTom()
@@ -41,6 +44,13 @@ public class HighTomColliders : MonoBehaviour
         transform.DOKill();
     }
 
+    void Explode()
+    {
+        Instantiate(FireworksAll, particlePoint);
+
+        FireworksAll.Play();
+    }
+
     //private void OnTriggerEnter(Collider other)
     //{
     //    HighTom();
@@ -51,6 +61,7 @@ public class HighTomColliders : MonoBehaviour
     {
         HighTom();
         OnScale();
+        Explode();
         //Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
         //if (collisionForce.y >= 50)
         //{

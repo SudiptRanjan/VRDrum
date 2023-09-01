@@ -7,6 +7,8 @@ public class MediumTomCollider : MonoBehaviour
 {
     Vector3 changedSize, origSize;
     Vector3 changedRotation, origRotation;
+    public ParticleSystem FireworksAll;
+    public Transform particlePoint;
 
     // Start is called before the first frame update
     void Start()
@@ -24,11 +26,17 @@ public class MediumTomCollider : MonoBehaviour
         {
             MediumTom();
             OnScale();
+            Explode();
         }
     }
     private void MediumTom()
     {
         AudioManager.instance.PlaySound(AudioManager.SoundName.MediumTom);
+    }
+    void Explode()
+    {
+        Instantiate(FireworksAll,particlePoint);
+        FireworksAll.Play();
     }
 
     private void OnScale()
@@ -54,6 +62,7 @@ public class MediumTomCollider : MonoBehaviour
     {
         MediumTom();
         OnScale();
+        Explode();
     }
 }
-//Vector3(1, 1, 1)
+

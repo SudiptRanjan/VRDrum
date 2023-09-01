@@ -7,6 +7,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class RideCymbalCollider : MonoBehaviour
 {
     Vector3 changedSize, origSize;
+    public ParticleSystem FireworksAll;
+    public Transform particlePoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +23,18 @@ public class RideCymbalCollider : MonoBehaviour
         {
             RideCymbal();
             OnScale();
+            Explode();
         }
+
     }
     private void RideCymbal()
     {
         AudioManager.instance.PlaySound(AudioManager.SoundName.RideCymbal);
+    }
+    void Explode()
+    {
+        Instantiate(FireworksAll, particlePoint);
+        FireworksAll.Play();
     }
     private void OnScale()
     {
@@ -49,6 +58,7 @@ public class RideCymbalCollider : MonoBehaviour
         {
             RideCymbal();
             OnScale();
+            Explode();
         }
     
     }

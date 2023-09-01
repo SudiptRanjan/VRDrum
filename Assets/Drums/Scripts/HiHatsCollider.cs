@@ -6,6 +6,8 @@ using UnityEngine;
 public class HiHatsCollider : MonoBehaviour
 {
     Vector3 changedSize, origSize;
+    public ParticleSystem FireworksAll;
+    public Transform particlePoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class HiHatsCollider : MonoBehaviour
         {
             HiHats();
             OnScale();
+            Explode();
         }
     }
     private void HiHats()
@@ -27,6 +30,12 @@ public class HiHatsCollider : MonoBehaviour
         AudioManager.instance.PlaySound(AudioManager.SoundName.HiHats);
     }
 
+    void Explode()
+    {
+        Instantiate(FireworksAll, particlePoint);
+
+        FireworksAll.Play();
+    }
     private void OnScale()
     {
         var tween = transform.DOShakeRotation(3f, 12, 10, 0, fadeOut: true, ShakeRandomnessMode.Harmonic);
@@ -47,6 +56,7 @@ public class HiHatsCollider : MonoBehaviour
         Debug.Log("Collided");
         HiHats();
         OnScale();
+        Explode();
     }
 }
 

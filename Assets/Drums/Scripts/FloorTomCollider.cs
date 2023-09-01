@@ -6,6 +6,8 @@ using UnityEngine;
 public class FloorTomCollider : MonoBehaviour
 {
     Vector3 changedSize, origSize;
+    public ParticleSystem FireworksAll;
+    public Transform particlePoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +22,17 @@ public class FloorTomCollider : MonoBehaviour
         {
             FloorTom();
             OnScale();
+            Explode();
         }
     }
     private void FloorTom()
     {
         AudioManager.instance.PlaySound(AudioManager.SoundName.FloorTom);
+    }
+    void Explode()
+    {
+        Instantiate(FireworksAll, particlePoint);
+        FireworksAll.Play();
     }
     private void OnScale()
     {
@@ -44,5 +52,6 @@ public class FloorTomCollider : MonoBehaviour
     {
         FloorTom();
         OnScale();
+        Explode();
     }
 }
