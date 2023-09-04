@@ -24,6 +24,10 @@ public class CrashCymbalolliders : MonoBehaviour
             OnScale();
             Explode();
         }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            AudioManager.instance.PlaySound(AudioManager.SoundName.BassDrum);
+        }
     }
 
     private void CrashCymbal()
@@ -39,7 +43,7 @@ public class CrashCymbalolliders : MonoBehaviour
     private void OnScale()
     {
         //var tween = transform.DOScale(changedSize, 0.09f).OnComplete(() => { transform.DOScale(origSize, 0.09f); });
-        var tween = transform.DOShakeRotation(3f, 10, 10, 0, fadeOut: true, ShakeRandomnessMode.Harmonic);
+        var tween = transform.DOShakeRotation(3f, 10, 10, 0, fadeOut: true, ShakeRandomnessMode.Harmonic).OnComplete(() => { transform.DORotate(origSize, 0.09f); }); ;
         if (tween.IsPlaying()) return;
         transform.DOKill();
     }

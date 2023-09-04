@@ -43,7 +43,7 @@ public class MediumTomCollider : MonoBehaviour
     {
         //var tween = transform.DOScale(changedSize, 0.09f).OnComplete(() => { transform.DOScale(origSize, 0.09f); });
         //var tween2 = transform.DORotate(changedRotation, 0.09f).OnComplete(() => { transform.DORotate(origRotation, 0.09f); });
-        var tween3 = transform.DOShakeRotation(0.1f, 3, 10, 0, fadeOut: true, ShakeRandomnessMode.Harmonic);
+        var tween3 = transform.DOShakeRotation(0.1f, 5, 10, 0, fadeOut: true, ShakeRandomnessMode.Harmonic);
 
         //if (tween.IsPlaying()) return;
         //if (tween2.IsPlaying()) return;

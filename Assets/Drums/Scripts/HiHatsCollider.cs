@@ -38,7 +38,7 @@ public class HiHatsCollider : MonoBehaviour
     }
     private void OnScale()
     {
-        var tween = transform.DOShakeRotation(3f, 12, 10, 0, fadeOut: true, ShakeRandomnessMode.Harmonic);
+        var tween = transform.DOShakeRotation(3f, 12, 10, 0, fadeOut: true, ShakeRandomnessMode.Harmonic).OnComplete(() => { transform.DORotate(origSize, 0.09f); });
 
         //var tween = transform.DORotate(changedSize, 0.09f).OnComplete(() => { transform.DORotate(origSize, 0.09f); });
         if (tween.IsPlaying()) return;

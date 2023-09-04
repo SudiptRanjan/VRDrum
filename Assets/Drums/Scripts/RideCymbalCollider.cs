@@ -39,7 +39,7 @@ public class RideCymbalCollider : MonoBehaviour
     private void OnScale()
     {
         //var tween = transform.DORotate(changedSize, 0.09f).OnComplete(() => { transform.DORotate(origSize, 0.09f); });
-        var tween = transform.DOShakeRotation(2f, 10, 10, 0, fadeOut: true, ShakeRandomnessMode.Harmonic);
+        var tween = transform.DOShakeRotation(2f, 10, 10, 0, fadeOut: true, ShakeRandomnessMode.Harmonic).OnComplete(() => { transform.DORotate(origSize, 0.09f); }); ;
 
         if (tween.IsPlaying()) return;
         transform.DOKill();
