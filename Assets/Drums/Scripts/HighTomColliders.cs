@@ -40,7 +40,9 @@ public class HighTomColliders : MonoBehaviour
 
         //if (tween.IsPlaying()) return;
         //if (tween2.IsPlaying()) return;
+        Debug.Log("1");
         if (tween3.IsPlaying()) return;
+        Debug.Log("2");
         transform.DOKill();
     }
 

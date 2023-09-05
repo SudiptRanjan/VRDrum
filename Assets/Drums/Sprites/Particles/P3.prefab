@@ -30,7 +30,8 @@ Transform:
   m_LocalPosition: {x: -1.345, y: 1.219, z: 0.224}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 614293640672411717}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &8943797283881282123
@@ -115,7 +116,7 @@ ParticleSystem:
     enabled: 1
     startLifetime:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 0
       scalar: 1
       minScalar: 0.0001
       maxCurve:
@@ -980,7 +981,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 8
+        scalar: 2
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1030,7 +1031,7 @@ ParticleSystem:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-      cycleCount: 1
+      cycleCount: 2
       repeatInterval: 0.01
       probability: 1
   SizeModule:
@@ -1366,9 +1367,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9150943, g: 0.16872607, b: 0.09064613, a: 0}
+        key0: {r: 0.990566, g: 0.7073246, b: 0.6775098, a: 0.3529412}
         key1: {r: 0.98039216, g: 0.10982885, b: 0.0705882, a: 1}
-        key2: {r: 0.972549, g: 0.16703281, b: 0, a: 0}
+        key2: {r: 0.9803922, g: 0.7058824, b: 0.6784314, a: 0.3529412}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -2411,7 +2412,7 @@ ParticleSystem:
     randomizePerFrame: 0
   ExternalForcesModule:
     serializedVersion: 2
-    enabled: 0
+    enabled: 1
     multiplierCurve:
       serializedVersion: 2
       minMaxState: 0
@@ -3878,7 +3879,7 @@ ParticleSystem:
       emitProbability: 1
   LightsModule:
     enabled: 1
-    ratio: 0
+    ratio: 1
     light: {fileID: 1465792821015413177, guid: 1170e2081f9c647ca8d095a912bda6a6, type: 3}
     randomDistribution: 1
     color: 1
@@ -3940,7 +3941,7 @@ ParticleSystem:
     intensityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4886,3 +4887,81 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1001 &2246300682643441530
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7022394522453523392}
+    m_Modifications:
+    - target: {fileID: 1705208798116939583, guid: 6ab97d5f68cd74ef097c7c27acae320b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705208798116939583, guid: 6ab97d5f68cd74ef097c7c27acae320b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705208798116939583, guid: 6ab97d5f68cd74ef097c7c27acae320b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.009
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705208798116939583, guid: 6ab97d5f68cd74ef097c7c27acae320b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5777118
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705208798116939583, guid: 6ab97d5f68cd74ef097c7c27acae320b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.57945293
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705208798116939583, guid: 6ab97d5f68cd74ef097c7c27acae320b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.40050828
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705208798116939583, guid: 6ab97d5f68cd74ef097c7c27acae320b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.41240335
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705208798116939583, guid: 6ab97d5f68cd74ef097c7c27acae320b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 19.826
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705208798116939583, guid: 6ab97d5f68cd74ef097c7c27acae320b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 89.534
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705208798116939583, guid: 6ab97d5f68cd74ef097c7c27acae320b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90.712
+      objectReference: {fileID: 0}
+    - target: {fileID: 7708824840415807932, guid: 6ab97d5f68cd74ef097c7c27acae320b, type: 3}
+      propertyPath: startDelay.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7708824840415807932, guid: 6ab97d5f68cd74ef097c7c27acae320b, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.07450977
+      objectReference: {fileID: 0}
+    - target: {fileID: 7708824840415807932, guid: 6ab97d5f68cd74ef097c7c27acae320b, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.21898592
+      objectReference: {fileID: 0}
+    - target: {fileID: 7708824840415807932, guid: 6ab97d5f68cd74ef097c7c27acae320b, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.93333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8338961353348324351, guid: 6ab97d5f68cd74ef097c7c27acae320b, type: 3}
+      propertyPath: m_Name
+      value: Red
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6ab97d5f68cd74ef097c7c27acae320b, type: 3}
+--- !u!4 &614293640672411717 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1705208798116939583, guid: 6ab97d5f68cd74ef097c7c27acae320b, type: 3}
+  m_PrefabInstance: {fileID: 2246300682643441530}
+  m_PrefabAsset: {fileID: 0}
