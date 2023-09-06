@@ -4954,8 +4954,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8400620486650145600, guid: 38b01757215b64b77ab51a62e2a27576, type: 3}
+      propertyPath: simulationSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400620486650145600, guid: 38b01757215b64b77ab51a62e2a27576, type: 3}
       propertyPath: ShapeModule.radius.value
       value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400620486650145600, guid: 38b01757215b64b77ab51a62e2a27576, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4978,6 +4986,10 @@ PrefabInstance:
     - target: {fileID: 2634949224845903708, guid: 4ef41fa88c1784a7f91a156bedb5e432, type: 3}
       propertyPath: m_Name
       value: p 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2634949224845903708, guid: 4ef41fa88c1784a7f91a156bedb5e432, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4461606382836343114, guid: 4ef41fa88c1784a7f91a156bedb5e432, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5024,12 +5036,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8400620486650145600, guid: 4ef41fa88c1784a7f91a156bedb5e432, type: 3}
+      propertyPath: simulationSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400620486650145600, guid: 4ef41fa88c1784a7f91a156bedb5e432, type: 3}
       propertyPath: ShapeModule.radius.value
       value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 8400620486650145600, guid: 4ef41fa88c1784a7f91a156bedb5e432, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8400620486650145600, guid: 4ef41fa88c1784a7f91a156bedb5e432, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b

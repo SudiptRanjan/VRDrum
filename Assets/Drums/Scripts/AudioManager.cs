@@ -40,7 +40,7 @@ public class AudioManager : MonoBehaviour
 
     public enum SoundName
     {
-        HighTom, MediumTom, FloorTom, SnareDrum, BassDrum, HiHats, CrashCymbal, RideCymbal
+        HighTom, MediumTom, FloorTom, SnareDrum, BassDrum, HiHats, CrashCymbal, RideCymbal,Stick
     }
 
    
@@ -48,3 +48,4 @@ public class AudioManager : MonoBehaviour
 
 //AudioManager.instance.PlaySound(AudioManager.SoundName.BounceBall);
 
+//Vector3(-0.56099999, -0.0250000004, 0.442000002)

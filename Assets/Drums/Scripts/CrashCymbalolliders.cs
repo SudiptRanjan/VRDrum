@@ -24,10 +24,7 @@ public class CrashCymbalolliders : MonoBehaviour
             OnScale();
             Explode();
         }
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            AudioManager.instance.PlaySound(AudioManager.SoundName.BassDrum);
-        }
+       
     }
 
     private void CrashCymbal()

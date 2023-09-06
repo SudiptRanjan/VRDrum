@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class FloorTomCollider : MonoBehaviour
 {
-    Vector3 changedSize, origSize;
+    //Vector3 changedSize, origSize;
     public ParticleSystem FireworksAll;
     public Transform particlePoint;
     // Start is called before the first frame update
     void Start()
     {
-        origSize = new Vector3(1, 1, 1);
-        changedSize = new Vector3(0.927690029f, 1, 0.901049972f);
+        //origSize = new Vector3(1, 1, 1);
+        //changedSize = new Vector3(0.927690029f, 1, 0.901049972f);
     }
 
     // Update is called once per frame
