@@ -60,9 +60,20 @@ public class MediumTomCollider : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        MediumTom();
-        OnScale();
-        Explode();
+        //MediumTom();
+        //OnScale();
+        //Explode();
+
+        Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
+        if (collisionForce.y >= 20)
+        {
+            //Debug.Log("collision at y position= =" + collisionForce.y);
+            MediumTom();
+            OnScale();
+            Explode();
+
+        }
+        Debug.Log("the contact force is==" + collisionForce);
     }
 }
 

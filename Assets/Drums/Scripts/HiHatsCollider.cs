@@ -53,10 +53,21 @@ public class HiHatsCollider : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collided");
-        HiHats();
-        OnScale();
-        Explode();
+        //Debug.Log("Collided");
+        //HiHats();
+        //OnScale();
+        //Explode();
+
+        Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
+        if (collisionForce.y >= 70)
+        {
+            //Debug.Log("collision at y position= =" + collisionForce.y);
+            HiHats();
+            OnScale();
+            Explode();
+
+        }
+        Debug.Log("the contact force is==" + collisionForce);
     }
 }
 

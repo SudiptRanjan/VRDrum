@@ -6,8 +6,8 @@ using UnityEngine;
 public class BaseDrum : MonoBehaviour
 {
     Vector3 changedSize, origSize;
-    //public ParticleSystem FireworksAll;
-    //public Transform particlePoint;
+    public ParticleSystem FireworksAll;
+    public Transform particlePoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +23,8 @@ public class BaseDrum : MonoBehaviour
             {
                BAseDrum();
                 OnScale();
+                Explode();
+
             }
         
     }
@@ -32,6 +34,13 @@ public class BaseDrum : MonoBehaviour
         AudioManager.instance.PlaySound(AudioManager.SoundName.BassDrum);
     }
 
+
+    void Explode()
+    {
+        Instantiate(FireworksAll, particlePoint);
+
+        FireworksAll.Play();
+    }
     private void OnScale()
     {
         var tween = transform.DOScale(changedSize, 0.09f).OnComplete(() => { transform.DOScale(origSize, 0.09f); });
@@ -41,6 +50,17 @@ public class BaseDrum : MonoBehaviour
     {
         BAseDrum();
         OnScale();
-        //Explode();
+        Explode();
+
+        //Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
+        //if (collisionForce.y >= 30)
+        //{
+        //    //Debug.Log("collision at y position= =" + collisionForce.y);
+        //    BAseDrum();
+        //    OnScale();
+        //    Explode();
+
+        //}
+        //Debug.Log("the contact force is==" + collisionForce);
     }
 }

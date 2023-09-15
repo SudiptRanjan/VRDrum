@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8943797283881282123}
   - component: {fileID: 1557557874177381482}
   m_Layer: 0
-  m_Name: P5
+  m_Name: P6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7820192643598714681}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -1.345, y: 1.219, z: 0.224}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 9018678823364922887}
   - {fileID: 5307961256353673317}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!198 &8943797283881282123
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -44,7 +44,7 @@ ParticleSystem:
   m_GameObject: {fileID: 7820192643598714681}
   serializedVersion: 8
   lengthInSec: 2
-  simulationSpeed: 1
+  simulationSpeed: 5
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -118,7 +118,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 5
       minScalar: 0.1
       maxCurve:
         serializedVersion: 2
@@ -289,7 +289,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.8
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1368,9 +1368,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.9433962, g: 0.872801, b: 0.4138483, a: 0.3137255}
-        key1: {r: 0.8962264, g: 0.36211166, b: 0, a: 1}
-        key2: {r: 0.8980392, g: 0, b: 0.30607516, a: 0.3137255}
+        key0: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 0.3137255}
+        key1: {r: 0.9339623, g: 0.80477923, b: 0.3480331, a: 1}
+        key2: {r: 1, g: 1, b: 1, a: 0.3137255}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -4958,19 +4958,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7708824840415807932, guid: acdddc6c39c7b4c82bc85ff55aca6849, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.013483422
+      value: 0.011764699
       objectReference: {fileID: 0}
     - target: {fileID: 7708824840415807932, guid: acdddc6c39c7b4c82bc85ff55aca6849, type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.41523907
+      value: 0.8114603
       objectReference: {fileID: 0}
     - target: {fileID: 7708824840415807932, guid: acdddc6c39c7b4c82bc85ff55aca6849, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.9528302
+      value: 0.9529412
       objectReference: {fileID: 0}
     - target: {fileID: 8338961353348324351, guid: acdddc6c39c7b4c82bc85ff55aca6849, type: 3}
       propertyPath: m_Name
-      value: Orange
+      value: White
       objectReference: {fileID: 0}
     - target: {fileID: 8338961353348324351, guid: acdddc6c39c7b4c82bc85ff55aca6849, type: 3}
       propertyPath: m_IsActive
@@ -5052,15 +5052,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8400620486650145600, guid: 38b01757215b64b77ab51a62e2a27576, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.06741722
+      value: 0.066666685
       objectReference: {fileID: 0}
     - target: {fileID: 8400620486650145600, guid: 38b01757215b64b77ab51a62e2a27576, type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.42336777
+      value: 0.874488
       objectReference: {fileID: 0}
     - target: {fileID: 8400620486650145600, guid: 38b01757215b64b77ab51a62e2a27576, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.9528302
+      value: 0.9529412
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

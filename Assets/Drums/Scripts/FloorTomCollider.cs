@@ -50,8 +50,19 @@ public class FloorTomCollider : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        FloorTom();
-        OnScale();
-        Explode();
+        //FloorTom();
+        //OnScale();
+        //Explode();
+
+        Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
+        if (collisionForce.y >= 50)
+        {
+            //Debug.Log("collision at y position= =" + collisionForce.y);
+            FloorTom();
+            OnScale();
+            Explode();
+
+        }
+        Debug.Log("the contact force is==" + collisionForce);
     }
 }

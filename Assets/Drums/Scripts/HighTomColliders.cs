@@ -40,9 +40,9 @@ public class HighTomColliders : MonoBehaviour
 
         //if (tween.IsPlaying()) return;
         //if (tween2.IsPlaying()) return;
-        Debug.Log("1");
+        //Debug.Log("1");
         if (tween3.IsPlaying()) return;
-        Debug.Log("2");
+        //Debug.Log("2");
         transform.DOKill();
     }
 
@@ -61,17 +61,18 @@ public class HighTomColliders : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        HighTom();
-        OnScale();
-        Explode();
-        //Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
-        //if (collisionForce.y >= 50)
-        //{
-        //    //Debug.Log("collision at y position= =" + collisionForce.y);
-        //    HighTom();
-        //    OnScale();
-        //}
-        //Debug.Log("the contact force is==" + collisionForce);
+        //HighTom();
+        //OnScale();
+        //Explode();
+        Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
+        if (collisionForce.y >= 20)
+        {
+            //Debug.Log("collision at y position= =" + collisionForce.y);
+            HighTom();
+            OnScale();
+            Explode();
+
+        }
+        Debug.Log("the contact force is==" + collisionForce);
     }
 }
-//Vector3(357.69104, 1.73200631, 313.573151)

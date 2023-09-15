@@ -48,8 +48,19 @@ public class SnareDrumCollider : MonoBehaviour
     //}
     private void OnCollisionEnter(Collision collision)
     {
-        SnareDrum();
-        OnScale();
-        Explode();
+        //SnareDrum();
+        //OnScale();
+        //Explode();
+
+        Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
+        if (collisionForce.y >= 70)
+        {
+            //Debug.Log("collision at y position= =" + collisionForce.y);
+            SnareDrum();
+            OnScale();
+            Explode();
+
+        }
+        Debug.Log("the contact force is==" + collisionForce);
     }
 }

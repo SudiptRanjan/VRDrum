@@ -56,9 +56,20 @@ public class RideCymbalCollider : MonoBehaviour
         XRGrabInteractable interactable = collision.gameObject.GetComponent<XRGrabInteractable>();
         if(interactable != null)
         {
-            RideCymbal();
-            OnScale();
-            Explode();
+            //RideCymbal();
+            //OnScale();
+            //Explode();
+
+            Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
+            if (collisionForce.y >= 70)
+            {
+                //Debug.Log("collision at y position= =" + collisionForce.y);
+                RideCymbal();
+                OnScale();
+                Explode();
+
+            }
+            Debug.Log("the contact force is==" + collisionForce);
         }
     
     }

@@ -53,8 +53,19 @@ public class CrashCymbalolliders : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        CrashCymbal();
-        OnScale();
-        Explode();
+        //CrashCymbal();
+        //OnScale();
+        //Explode();
+
+        Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
+        if (collisionForce.y >= 70)
+        {
+            //Debug.Log("collision at y position= =" + collisionForce.y);
+            CrashCymbal();
+            OnScale();
+            Explode();
+
+        }
+        Debug.Log("the contact force is==" + collisionForce);
     }
 }
