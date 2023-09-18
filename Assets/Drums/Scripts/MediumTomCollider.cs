@@ -10,7 +10,6 @@ public class MediumTomCollider : MonoBehaviour
     public ParticleSystem FireworksAll;
     public Transform particlePoint;
 
-    // Start is called before the first frame update
     void Start()
     {
         origSize = new Vector3(1f, 1f, 1f);
@@ -19,7 +18,6 @@ public class MediumTomCollider : MonoBehaviour
         changedRotation = new Vector3(0, 0, 313.573151f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.W))
@@ -51,12 +49,6 @@ public class MediumTomCollider : MonoBehaviour
 
         transform.DOKill();
     }
-
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    MediumTom();
-    //    OnScale();
-    //}
 
     private void OnCollisionEnter(Collision collision)
     {

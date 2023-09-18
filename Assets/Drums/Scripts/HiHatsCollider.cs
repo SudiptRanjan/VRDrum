@@ -8,14 +8,13 @@ public class HiHatsCollider : MonoBehaviour
     Vector3 changedSize, origSize;
     public ParticleSystem FireworksAll;
     public Transform particlePoint;
-    // Start is called before the first frame update
+
     void Start()
     {
         origSize = new Vector3(0f, 0f, 0f);
         changedSize = new Vector3(12.1796303f, 359.373047f, 347.864624f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Y))
@@ -45,15 +44,11 @@ public class HiHatsCollider : MonoBehaviour
         transform.DOKill();
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    HiHats();
-    //    OnScale();
-    //}
+  
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log("Collided");
+       
         //HiHats();
         //OnScale();
         //Explode();
@@ -61,13 +56,11 @@ public class HiHatsCollider : MonoBehaviour
         Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
         if (collisionForce.y >= 70)
         {
-            //Debug.Log("collision at y position= =" + collisionForce.y);
             HiHats();
             OnScale();
             Explode();
 
         }
-        Debug.Log("the contact force is==" + collisionForce);
     }
 }
 

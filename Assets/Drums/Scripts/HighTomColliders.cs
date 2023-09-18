@@ -53,12 +53,6 @@ public class HighTomColliders : MonoBehaviour
         FireworksAll.Play();
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    HighTom();
-    //    OnScale();
-    //}
-
     private void OnCollisionEnter(Collision collision)
     {
         //HighTom();
@@ -67,12 +61,10 @@ public class HighTomColliders : MonoBehaviour
         Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
         if (collisionForce.y >= 20)
         {
-            //Debug.Log("collision at y position= =" + collisionForce.y);
             HighTom();
             OnScale();
             Explode();
 
         }
-        Debug.Log("the contact force is==" + collisionForce);
     }
 }

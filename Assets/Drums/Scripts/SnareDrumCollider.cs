@@ -8,14 +8,14 @@ public class SnareDrumCollider : MonoBehaviour
     Vector3 changedSize, origSize;
     public ParticleSystem FireworksAll;
     public Transform particlePoint;
-    // Start is called before the first frame update
+
     void Start()
     {
         origSize = new Vector3(1, 1, 0.903320014f);
         changedSize = new Vector3(0.888629973f, 1f, 0.810115457f);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
@@ -41,11 +41,8 @@ public class SnareDrumCollider : MonoBehaviour
         if (tween.IsPlaying()) return;
         transform.DOKill();
     }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    SnareDrum();
-    //    OnScale();
-    //}
+
+
     private void OnCollisionEnter(Collision collision)
     {
         //SnareDrum();
@@ -55,12 +52,10 @@ public class SnareDrumCollider : MonoBehaviour
         Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
         if (collisionForce.y >= 70)
         {
-            //Debug.Log("collision at y position= =" + collisionForce.y);
             SnareDrum();
             OnScale();
             Explode();
 
         }
-        Debug.Log("the contact force is==" + collisionForce);
     }
 }

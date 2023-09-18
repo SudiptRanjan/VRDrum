@@ -55,12 +55,10 @@ public class BaseDrum : MonoBehaviour
         //Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
         //if (collisionForce.y >= 30)
         //{
-        //    //Debug.Log("collision at y position= =" + collisionForce.y);
         //    BAseDrum();
         //    OnScale();
         //    Explode();
 
         //}
-        //Debug.Log("the contact force is==" + collisionForce);
     }
 }

@@ -45,11 +45,7 @@ public class CrashCymbalolliders : MonoBehaviour
         transform.DOKill();
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    CrashCymbal();
-    //    OnScale();
-    //}
+   
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -60,12 +56,12 @@ public class CrashCymbalolliders : MonoBehaviour
         Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
         if (collisionForce.y >= 70)
         {
-            //Debug.Log("collision at y position= =" + collisionForce.y);
+         
             CrashCymbal();
             OnScale();
             Explode();
 
         }
-        Debug.Log("the contact force is==" + collisionForce);
+        
     }
 }
