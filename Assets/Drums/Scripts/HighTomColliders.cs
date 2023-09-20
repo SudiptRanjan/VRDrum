@@ -58,8 +58,8 @@ public class HighTomColliders : MonoBehaviour
         //HighTom();
         //OnScale();
         //Explode();
-        Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
-        if (collisionForce.y >= 20)
+        float collisionForce = (collision.impulse / Time.fixedDeltaTime).magnitude;
+        if (collisionForce >= 20)
         {
             HighTom();
             OnScale();

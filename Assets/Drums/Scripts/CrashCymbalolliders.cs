@@ -53,8 +53,8 @@ public class CrashCymbalolliders : MonoBehaviour
         //OnScale();
         //Explode();
 
-        Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
-        if (collisionForce.y >= 70)
+        float collisionForce = (collision.impulse / Time.fixedDeltaTime).magnitude;
+        if (collisionForce >= 50)
         {
          
             CrashCymbal();

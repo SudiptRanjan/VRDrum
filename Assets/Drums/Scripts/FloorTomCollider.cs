@@ -46,8 +46,8 @@ public class FloorTomCollider : MonoBehaviour
         //OnScale();
         //Explode();
 
-        Vector3 collisionForce = collision.impulse / Time.fixedDeltaTime;
-        if (collisionForce.y >= 50)
+        float collisionForce = (collision.impulse / Time.fixedDeltaTime).magnitude;
+        if (collisionForce >= 50)
         {
             FloorTom();
             OnScale();
