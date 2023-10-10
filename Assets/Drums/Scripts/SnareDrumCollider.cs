@@ -50,7 +50,7 @@ public class SnareDrumCollider : MonoBehaviour
         //Explode();
 
         float collisionForce = (collision.impulse / Time.fixedDeltaTime).magnitude;
-        if (collisionForce >= 70)
+        if (collisionForce >= 40)
         {
             SnareDrum();
             OnScale();
